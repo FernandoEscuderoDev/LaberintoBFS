@@ -26,9 +26,9 @@ export default function Table() {
   ]);
   // Variables que controla el boton para inicializar el algoritmo
   const [start, setStart] = useState(false);
-  console.time('Inicio')
   // Función que se encarga de ejecutar el codigo en React
   useEffect(() => {
+    console.time("Inicio");
     // Función para encontrar el camino más corto desde (x, y) hasta el destino
     async function findShortestPath(x, y) {
       // Verifica límites y marca las direcciones (arriba, derecha, abajo, izquierda)
@@ -115,20 +115,21 @@ export default function Table() {
         // Pintar el camino en la interfaz
         paintPath(shortestPath).then(() => {
           // Mostrar un mensaje al llegar al destino
+          console.timeEnd("Inicio");
           setTimeout(() => {
-            alert("Llegó");
+            alert("Llegaste a la meta!!");
           }, 200);
         });
       });
     }
   }, [matriz, start]);
-  console.timeEnd('Inicio')
+
   // Función para agregar un retraso en la animación
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-    //Diseño colores que se le asignaran a x numero
+  //Diseño colores que se le asignaran a x numero
   function Condicionales(valor) {
     switch (valor) {
       case -1:
@@ -143,12 +144,13 @@ export default function Table() {
         return "text-white bg-black"; // Otros valores (celdas bloqueadas)
     }
   }
-
   return (
     <>
       {/* Botón para iniciar la búsqueda */}
       <div className="bg-black h-screen w-full text-center">
-        <h1 className='text-3xl font-semibold text-white py-2'>Laberinto BFS</h1>
+        <h1 className="text-3xl font-semibold text-white py-2">
+          Laberinto BFS
+        </h1>
         <div className="mx-auto flex h-5/6 w-5/6 items-center justify-center rounded-xl shadow-2xl bg-emerald-600 p-4">
           <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
             {matriz.map((fila) =>
