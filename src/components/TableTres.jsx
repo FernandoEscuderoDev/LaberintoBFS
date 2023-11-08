@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import JSConfetti from "js-confetti";
 
-export default function Table() {
+export default function TableTres() {
   // Estado de la matriz y funcióna para actualizarlo
   const [matriz, setMatriz] = useState([
     // Matriz que representa al laberinto
@@ -13,18 +13,18 @@ export default function Table() {
       2: Inicio
       3: Salida
     */
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0],
-    [0, 2, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0],
-    [0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0],
-    [0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0],
-    [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0],
-    [0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0],
-    [0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0],
-    [0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0],
-    [0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0],
-    [0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0],
-    [0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 3, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0],
+      [0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0],
+      [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0],
+      [0, 1, 1, 0, 1, 2, 1, 0, 1, 0, 1, 0],
+      [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+      [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0],
+      [0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0],
+      [0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0],
+      [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ]);
   // Variables que controla el boton para inicializar el algoritmo
   const [start, setStart] = useState(false);
@@ -210,7 +210,7 @@ export default function Table() {
               <a href="/" className="">
                 Reintentar
               </a>
-              <a href="/tableDos" className="">
+              <a href="/" className="">
                 Siguiente
               </a>
             </div>
