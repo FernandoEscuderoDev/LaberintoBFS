@@ -41,12 +41,6 @@ export default function TableTres() {
 
     // Función para encontrar el camino más corto desde (x, y) hasta el destino
     async function findShortestPath(x, y) {
-      // Verifica límites y marca las direcciones (arriba, derecha, abajo, izquierda)
-      if (x < 0 || x >= matriz.length || y < 0 || y >= matriz[0].length) {
-        return [];
-      }
-
-      // Coordenadas de las direcciones (arriba, derecha, abajo, izquierda)
       const dx = [-1, 0, 1, 0];
       const dy = [0, 1, 0, -1];
 
@@ -54,6 +48,7 @@ export default function TableTres() {
       const visited = Array(matriz.length)
         .fill()
         .map(() => Array(matriz[0].length).fill(false));
+        console.table(visited)
 
       // Cola para realizar el BFS
       const queue = [{ x, y, path: [] }];
