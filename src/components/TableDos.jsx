@@ -207,7 +207,7 @@ export default function TableDos() {
               </div>
             </div>
             <div className="z-10 flex h-16 w-full items-center justify-center rounded-b-xl gap-5 bg-purple-800 shadow-lg text-lg">
-              <a href="/tablesDos" className="">
+              <a href="/tableDos" className="">
                 Reintentar
               </a>
               <a href="/tableTres" className="">
